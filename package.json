@@ -1,0 +1,107 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "React Test SoftMediaLab",
+  "homepage": "https://github.com/epifanovmd/test-softMediaLab",
+  "author": {
+    "name": "Epifanov Andrei",
+    "email": "epifanovmd@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epifanovmd/test-softMediaLab.git"
+  },
+  "scripts": {
+    "build:dev": "cross-env NODE_ENV=development webpack",
+    "build:prod": "cross-env NODE_ENV=production webpack",
+    "dev": "webpack-dev-server",
+    "lint": "eslint \"src/**/*{.ts,.tsx}\"",
+    "lint:fix": "eslint --fix \"src/**/*{.ts,.tsx}\"",
+    "prettier:fix": "prettier --parser typescript --write src/**/*.{json,ts,tsx}",
+    "check-packages-updates": "yarn outdated"
+  },
+  "dependencies": {
+    "@loadable/component": "^5.12.0",
+    "@loadable/webpack-plugin": "^5.12.0",
+    "@reduxjs/toolkit": "^1.3.5",
+    "@svgr/webpack": "^5.3.1",
+    "antd": "^4.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.0.1",
+    "yup": "^0.28.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@loadable/babel-plugin": "^5.12.0",
+    "@types/autoprefixer": "^9.7.2",
+    "@types/copy-webpack-plugin": "^5.0.0",
+    "@types/http-proxy-middleware": "^0.19.3",
+    "@types/loadable__component": "^5.10.0",
+    "@types/mini-css-extract-plugin": "^0.9.1",
+    "@types/node": "^13.11.0",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "@types/styled-components": "^5.0.1",
+    "@types/webpack-dev-server": "^3.10.1",
+    "@types/webpack-manifest-plugin": "^2.1.0",
+    "@types/yup": "^0.26.34",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "autoprefixer": "^9.7.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "cache-loader": "^4.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "eslint-plugin-simple-import-sort": "^5.0.2",
+    "file-loader": "^6.0.0",
+    "fork-ts-checker-webpack-plugin": "^5.0.0",
+    "html-webpack-plugin": "^4.0.4",
+    "http-proxy-middleware": "^1.0.3",
+    "husky": "^4.2.2",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^10.1.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "null-loader": "^3.0.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.2",
+    "react-hooks": "^1.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "terser-webpack-plugin": "^2.3.5",
+    "thread-loader": "^2.1.3",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "typescript-eslint-parser": "^22.0.0",
+    "typescript-plugin-css-modules": "^2.2.0",
+    "url-loader": "^4.0.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-manifest-plugin": "^2.2.0"
+  },
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix \"src/**/*{.ts,.tsx}\"",
+      "prettier --parser typescript --write src/**/*.{json,ts,tsx}",
+      "git add"
+    ]
+  }
+}

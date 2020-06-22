@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "",
+    "pathRewrite": {"^/api": "/"},
+    "changeOrigin": true
+  }
+}
