@@ -1,6 +1,5 @@
 # React Test SoftMediaLab
 
-React Redux Server Side Rendering Application
 
 ##### Stack:
   - Typescript
